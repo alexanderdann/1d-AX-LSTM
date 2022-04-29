@@ -5,9 +5,9 @@ Used and optimized for different datasets<sup>[4, 5]</sup> which include motor i
 
 # References
 ----
-[1] - https://ieeexplore.ieee.org/document/8496885<br/>  
-[2] - https://www.tensorflow.org/api_docs/python/tf<br/>  
-[3] - https://www.tensorflow.org/tensorboard/get_started<br/>  
+[1] - https://ieeexplore.ieee.org/document/8496885<br/>
+[2] - https://www.tensorflow.org/api_docs/python/tf<br/>
+[3] - https://www.tensorflow.org/tensorboard/get_started<br/>
 [4] - https://www.bbci.de/competition/iv/desc_2a.pdf<br/>
 [5] - https://www.bbci.de/competition/iii/desc_IVa.html<br/>
 [6] - https://www.emotiv.com/epoc/<br/>
