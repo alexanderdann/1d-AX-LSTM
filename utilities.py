@@ -12,10 +12,6 @@ logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler())
 
 
-'''
-    Add sliding window
-'''
-
 def get_bci_iii_data(path, mode):
     labels = ['aa', 'al', 'av', 'aw', 'ay']
     data = list()
@@ -41,6 +37,7 @@ def get_bci_iii_data(path, mode):
 
     logger.info(f'*** Import of BCI Competition III IVa dataset done ***\n\n')
     return final[mode]
+
 
 def get_npz_data(path, user, labels=None, sec=3):
     assert sec <= 3
@@ -92,9 +89,10 @@ def get_npz_data(path, user, labels=None, sec=3):
 
     data_per_batch = tmp_d
     targets_per_batch = np.array(tmp_b)
-    logger.info(f'*** Import done ***\nShape of data {data_per_batch.shape} and targets {targets_per_batch.shape}\n')
+    logger.info(f'Import of BCI Competition IV 2a dataset done\nShape of data {data_per_batch.shape} and targets {targets_per_batch.shape}\n')
 
     return data_per_batch, targets_per_batch, targets_per_timepoint
+
 
 def _check_length(marker_data):
     timestamps, deltas = list(), list()
@@ -241,8 +239,3 @@ def get_project_data(path, labels=None, trials=-1, sec=5, offset=0.0):
 
 
     return RAW_EEG, TARGET.astype(int)
-
-
-#DATA_PATH = f'{os.getcwd()}/UserInterface/Database/Alex/Data'
-#res = get_project_data(DATA_PATH, [0.0, 3.0], trials=20, sec=4)
-#print(res[0].shape)
